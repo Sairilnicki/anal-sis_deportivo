@@ -1,29 +1,34 @@
-cavani_goles = int(input("insertar los goles de cavani"))
-cavani_partidos = int(input("partidos disputados"))
+nombre_del_jugador1 =input("colocar nombre")
+nombre_del_jugador2 =input("colocar nombre")
 
-merentiel_goles = int(input("insertar los goles de merentiel"))
-merentiel_partidos = int(input("partidos disputados"))
 
-if cavani_partidos > 0:
-    efectividad_cavani = cavani_goles / cavani_partidos
-    print(f"la efectividad de cavani es {efectividad_cavani:.2f}")
+
+nombre1_goles = int(input(f"insertar los goles de {nombre_del_jugador1} "))
+nombre1_partidos = int(input(f"partidos disputados de {nombre_del_jugador1}"))
+
+nombre2_goles = int(input(f"insertar los goles de {nombre_del_jugador2} "))
+nombre2_partidos = int(input(f"partidos disputados de {nombre_del_jugador2}"))
+
+if nombre1_partidos > 0:
+    efectividad1= nombre1_goles/ nombre1_partidos
+    print(f"la efectividad de{nombre_del_jugador1} es {efectividad1:.2f}")
 
 else: 
     print("no se puede calcular la efectividad si no jugo ningun partido pavo")
     
 
-if cavani_partidos > 0:
-    efectividad_merentiel = merentiel_goles / merentiel_partidos
-    print(f"la efectividad de la bestia es {efectividad_merentiel:.2f}")
+if nombre1_goles > 0:
+    efectividad_nombre2 = nombre2_goles/ nombre2_partidos
+    print(f"la efectividad de {nombre_del_jugador2} es {efectividad_nombre2:.2f}")
 
 else: 
     print("no se puede calcular la efectividad si no jugo ningun partido pavo")
 
-if efectividad_cavani > efectividad_merentiel:
-    print("el muerto de cavani gana en efectividad")
+if efectividad1 > efectividad_nombre2:
+    print(f"el mejor es {nombre_del_jugador1}")
 
-elif efectividad_merentiel > efectividad_cavani:
-    print("la bestia gana en efectividad")
+elif efectividad_nombre2 > efectividad1:
+    print(f"el mejor es {nombre_del_jugador2}")
 
 else:
     print("tienen los mismos goles")
